@@ -27,17 +27,17 @@ namespace FactoryMethodPattern {
         export function execute(type: string): AddOrSubstract {
 
             if (type === "A") {
-                return new FactoryAdd();
+                return new FactoryAdd()
             } else if (type === "B") {
-                return new FactorySubstract();
-            }else return new FactoryMultiply();
+                return new FactorySubstract()
+            } else return new FactoryMultiply()
         }
     }
 
     const add = new FactoryAdd()
     const substract = new FactorySubstract()
     const multiply = new FactoryMultiply()
-    
+
     console.log(add.calculate("A"));
     console.log(substract.calculate("B"));
     console.log(multiply.calculate("C"));
